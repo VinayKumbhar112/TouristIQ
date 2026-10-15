@@ -1,0 +1,49 @@
+{
+  "incidents": {},
+  "response_units": {
+    "UNIT-RESCUE-01": {
+      "unit_id": "UNIT-RESCUE-01",
+      "name": "Sahyadri Mountain Rescue Squad Alpha",
+      "type": "MOUNTAIN_RESCUE",
+      "current_location": {
+        "lat": 17.671,
+        "lon": 73.716
+      },
+      "status": "AVAILABLE",
+      "assigned_incident_id": null
+    },
+    "UNIT-POLICE-02": {
+      "unit_id": "UNIT-POLICE-02",
+      "name": "Satara Rural Police Quick Reaction Unit",
+      "type": "POLICE",
+      "current_location": {
+        "lat": 17.7265,
+        "lon": 73.747
+      },
+      "status": "AVAILABLE",
+      "assigned_incident_id": null
+    },
+    "UNIT-MED-03": {
+      "unit_id": "UNIT-MED-03",
+      "name": "Koyna Backwaters Boat Ambulance Med-1",
+      "type": "MEDICAL",
+      "current_location": {
+        "lat": 17.7275,
+        "lon": 73.7465
+      },
+      "status": "AVAILABLE",
+      "assigned_incident_id": null
+    },
+    "UNIT-RANGER-04": {
+      "unit_id": "UNIT-RANGER-04",
+      "name": "Koyna Wildlife Sanctuary Forest Patrol Bravo",
+      "type": "RANGER",
+      "current_location": {
+        "lat": 17.668,
+        "lon": 73.705
+      },
+      "status": "AVAILABLE",
+      "assigned_incident_id": null
+    }
+  }
+}
