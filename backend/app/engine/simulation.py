@@ -226,13 +226,25 @@ class SimulationEngine:
                 )
                 speed = 2.5
             else: # normal
-                prog = self.tourist_progress[tid] + (0.004 * (effective_delta / 5.0))
-                if prog > 1.0:
-                    prog = 1.0
+                prog = self.tourist_progress[tid] + (0.008 * (effective_delta / 5.0))
+                if prog >= 1.0:
+                    prog = 0.02 # Cycle back to trailhead for continuous lively simulation
                 self.tourist_progress[tid] = prog
                 
-                idx = min(int(prog * (len(route) - 1)), len(route) - 1)
-                curr_loc = route[idx]
+                # Smooth continuous linear interpolation between waypoints
+                if len(route) > 1:
+                    float_idx = prog * (len(route) - 1)
+                    i1 = int(float_idx)
+                    i2 = min(i1 + 1, len(route) - 1)
+                    ratio = float_idx - i1
+                    p1 = route[i1]
+                    p2 = route[i2]
+                    curr_loc = Coordinates(
+                        lat=round(p1.lat + (p2.lat - p1.lat) * ratio, 6),
+                        lon=round(p1.lon + (p2.lon - p1.lon) * ratio, 6)
+                    )
+                else:
+                    curr_loc = route[0] if route else Coordinates(lat=17.6717, lon=73.7172)
                 speed = 4.2
 
             gps = TouristGPSUpdate(
