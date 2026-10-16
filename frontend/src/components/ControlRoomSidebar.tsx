@@ -87,11 +87,12 @@ export const ControlRoomSidebar: React.FC<ControlRoomSidebarProps> = ({
       <div className="h-16 px-4 flex items-center gap-3 border-b border-[#1B2A42]">
         <BrandEmblem size="md" variant="dark" />
         <div className="flex flex-col">
-          <span className="font-bold text-white text-[13px] tracking-wide leading-tight">
-            TOURIST SAFETY HQ
+          <span className="font-bold text-white text-[14px] tracking-wide leading-tight flex items-center gap-1.5">
+            TouristIQ
+            <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">HQ</span>
           </span>
-          <span className="text-[11px] text-[#667085] font-mono tracking-wider">
-            SIH POLICE OPS ROOM
+          <span className="text-[10px] text-slate-400 font-mono tracking-wider">
+            SAFETY INTELLIGENCE
           </span>
         </div>
       </div>

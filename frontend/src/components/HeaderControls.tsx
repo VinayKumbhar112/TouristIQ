@@ -65,8 +65,10 @@ export const HeaderControls: React.FC<HeaderControlsProps> = ({
           <BrandEmblem size="md" variant="dark" />
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-sm md:text-base font-bold tracking-tight text-[#1D2939]">
-                Vasota Fort — Koyna Sanctuary Sector Command
+              <h1 className="text-sm md:text-base font-bold tracking-tight text-[#1D2939] flex items-center gap-1.5">
+                <span className="text-[#2563EB]">TouristIQ</span>
+                <span className="text-slate-400 font-normal">|</span>
+                <span>Vasota Fort &amp; Koyna Sector Command</span>
               </h1>
               <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold ${
                 isConnected
